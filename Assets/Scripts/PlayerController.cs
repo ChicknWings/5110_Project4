@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f; // 角色移动速度
+    public float moveSpeed = 5f; 
 
     private Rigidbody2D rb;
     private float moveInput;
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        moveInput = Input.GetAxis("Horizontal"); // 获取水平输入
+        moveInput = Input.GetAxis("Horizontal"); 
     }
 
     void FixedUpdate()
