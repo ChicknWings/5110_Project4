@@ -21,5 +21,15 @@ public class Collision : MonoBehaviour
 
             fallingBlock.CollisionEnter(collision);
         }
+        else
+        {
+            Debug.Log("没有发生地面碰撞");
+        }
+    }
+    
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        //fallingBlock.CollisionExit(other);
     }
 }

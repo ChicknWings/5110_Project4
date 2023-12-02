@@ -67,6 +67,23 @@ public class FallingBlock : MonoBehaviour
             other.nextBlock = this;
         }
     }
+
+    /*
+    public void CollisionExit(Collider2D other)
+    {
+        if (preivousBlock != null)
+        {
+            if (other.gameObject == preivousBlock.gameObject)
+            {
+                ReFall();
+                Debug.Log("reflall");
+            }
+        }
+        
+    }
+    */
+    
+
     void UpdateTimerCircle(float progress)
     {
         if (timerCircle != null)
@@ -79,10 +96,12 @@ public class FallingBlock : MonoBehaviour
     {
         Debug.Log("Finished!");
         //调用后一个物体的refall，如果有后一个物体
+        
         if(nextBlock != null)
         {
             nextBlock.ReFall();
         }
+        
         //调用前一个物体的recatch
         if(preivousBlock != null)
         {
