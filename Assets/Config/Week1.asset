@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840a8948a877ce44bb4721784b4c06b7, type: 3}
+  m_Name: Week1
+  m_EditorClassIdentifier: 
+  id: 1
+  title: Week1
+  description: This is week 1. Day1-5 have some study blocks and play blocks, and
+    day6-7 only have play blocks.
+  Monday:
+    duration: 10
+    speed: 4
+    blocks:
+    - block: {fileID: 1858403449023811883, guid: cd845886ae8695142bae18e0b5810622, type: 3}
+      spawnNumber: 2
+    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+      spawnNumber: 1
+  Tuesday:
+    duration: 10
+    speed: 4
+    blocks:
+    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
+      spawnNumber: 1
+    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+      spawnNumber: 3
+  Wednesday:
+    duration: 10
+    speed: 4
+    blocks:
+    - block: {fileID: 1858403449023811883, guid: cd845886ae8695142bae18e0b5810622, type: 3}
+      spawnNumber: 1
+    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
+      spawnNumber: 2
+  Thursday:
+    duration: 10
+    speed: 4
+    blocks:
+    - block: {fileID: 1858403449023811883, guid: cd845886ae8695142bae18e0b5810622, type: 3}
+      spawnNumber: 2
+    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
+      spawnNumber: 3
+    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+      spawnNumber: 1
+  Friday:
+    duration: 10
+    speed: 4
+    blocks:
+    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+      spawnNumber: 1
+    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
+      spawnNumber: 1
+  Saturday:
+    duration: 10
+    speed: 4
+    blocks:
+    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+      spawnNumber: 3
+  Sunday:
+    duration: 10
+    speed: 4
+    blocks:
+    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+      spawnNumber: 3
