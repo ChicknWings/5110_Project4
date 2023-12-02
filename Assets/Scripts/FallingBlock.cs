@@ -91,11 +91,11 @@ public class FallingBlock : MonoBehaviour
         preivousBlock = null;
         nextBlock = null;
         transform.parent = null;
-        Debug.Log("destroy:" + this.gameObject);
-        Destroy(this.gameObject);
         //加分
         //加进度条
         //让自己消失
+        Debug.Log("destroy:" + this.gameObject);
+        Destroy(this.gameObject);
     }
 
     public void ReFall()//如果下面的一个block消失了，就要调用上一个block的这个方法
