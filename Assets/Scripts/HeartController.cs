@@ -16,6 +16,10 @@ public class HeartController : MonoBehaviour
     void Start()
     {
         currentHeart = iniHeart;
+        for (int i = 0; i < hearts.Count; i++)
+        {
+            hearts[i].SetActive(false);
+        }
         for (int i = 0; i < currentHeart; i++)
         {
             hearts[i].SetActive(true);
@@ -29,6 +33,10 @@ public class HeartController : MonoBehaviour
         if (currentHeart <= 0)
         {
             currentHeart = 0;
+        }
+        for(int i = 0; i < hearts.Count; i ++)
+        {
+            hearts[i].SetActive(false);
         }
         for(int i = 0; i< currentHeart; i ++)
         {
