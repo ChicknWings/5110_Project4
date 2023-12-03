@@ -12,21 +12,14 @@ public class LevelConfig : ScriptableObject
     [TextArea]
     public string description;
 
-    public DailyConfig Monday;
-    public DailyConfig Tuesday;
-    public DailyConfig Wednesday;
-    public DailyConfig Thursday;
-    public DailyConfig Friday;
-    public DailyConfig Saturday;
-    public DailyConfig Sunday;
-
+    public List<DailyConfig> dailyConfig;
 }
 
 [Serializable]
 public struct DailyConfig
 {
+    public string title;
     public float duration;
-    public int speed;
     public List<BlockConfig> blocks;
 }
 [Serializable]
