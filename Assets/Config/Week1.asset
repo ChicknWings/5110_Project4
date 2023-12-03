@@ -16,57 +16,47 @@ MonoBehaviour:
   title: Week1
   description: This is week 1. Day1-5 have some study blocks and play blocks, and
     day6-7 only have play blocks.
-  Monday:
-    duration: 10
-    speed: 4
+  dailyConfig:
+  - title: Monday
+    duration: 20
     blocks:
-    - block: {fileID: 1858403449023811883, guid: cd845886ae8695142bae18e0b5810622, type: 3}
+    - block: {fileID: 9063112012820018940, guid: 9b390c2e4bd5d82478863ab18ec3af77, type: 3}
       spawnNumber: 2
-    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
-      spawnNumber: 1
-  Tuesday:
-    duration: 10
-    speed: 4
-    blocks:
-    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
-      spawnNumber: 1
-    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
-      spawnNumber: 3
-  Wednesday:
-    duration: 10
-    speed: 4
-    blocks:
-    - block: {fileID: 1858403449023811883, guid: cd845886ae8695142bae18e0b5810622, type: 3}
-      spawnNumber: 1
-    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
+    - block: {fileID: 8105163708011385354, guid: 22b075897a581ef4c9a56dc9272a0f34, type: 3}
       spawnNumber: 2
-  Thursday:
-    duration: 10
-    speed: 4
+  - title: Tuesday
+    duration: 20
     blocks:
-    - block: {fileID: 1858403449023811883, guid: cd845886ae8695142bae18e0b5810622, type: 3}
+    - block: {fileID: 9063112012820018940, guid: 9b390c2e4bd5d82478863ab18ec3af77, type: 3}
       spawnNumber: 2
-    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
+  - title: Wednesday
+    duration: 20
+    blocks:
+    - block: {fileID: 9063112012820018940, guid: 9b390c2e4bd5d82478863ab18ec3af77, type: 3}
       spawnNumber: 3
-    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+    - block: {fileID: 8105163708011385354, guid: 22b075897a581ef4c9a56dc9272a0f34, type: 3}
       spawnNumber: 1
-  Friday:
-    duration: 10
-    speed: 4
+  - title: Thursday
+    duration: 20
     blocks:
-    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+    - block: {fileID: 9063112012820018940, guid: 9b390c2e4bd5d82478863ab18ec3af77, type: 3}
       spawnNumber: 1
-    - block: {fileID: 633039601694470956, guid: 54dc92e69f44cae43ba50018d928b035, type: 3}
-      spawnNumber: 1
-  Saturday:
-    duration: 10
-    speed: 4
-    blocks:
-    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+    - block: {fileID: 8105163708011385354, guid: 22b075897a581ef4c9a56dc9272a0f34, type: 3}
       spawnNumber: 3
-  Sunday:
-    duration: 10
-    speed: 4
+  - title: Friday
+    duration: 20
     blocks:
-    - block: {fileID: 6539965988566015115, guid: 8c69ac295ec5bf74fb23e9c2ecb419d9, type: 3}
+    - block: {fileID: 9063112012820018940, guid: 9b390c2e4bd5d82478863ab18ec3af77, type: 3}
+      spawnNumber: 2
+  - title: Saturday
+    duration: 20
+    blocks:
+    - block: {fileID: 8105163708011385354, guid: 22b075897a581ef4c9a56dc9272a0f34, type: 3}
+      spawnNumber: 3
+  - title: Sunday
+    duration: 20
+    blocks:
+    - block: {fileID: 9063112012820018940, guid: 9b390c2e4bd5d82478863ab18ec3af77, type: 3}
+      spawnNumber: 1
+    - block: {fileID: 8105163708011385354, guid: 22b075897a581ef4c9a56dc9272a0f34, type: 3}
       spawnNumber: 3

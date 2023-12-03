@@ -11,9 +11,10 @@ public class FallingBlock : MonoBehaviour
     public bool isCaught = false; // if be caught by others
     public bool isCatchOthers = false;// if catch others
 
-    public float score;
-    public float bonus = 0.2f;//如果完成了+多少分，范围0-1
-    public float punish = -0.1f;//如果失败了+多少分，范围-1-0
+    public int score;
+    public Type type;
+    public float bonus = 0.2f;//如果完成了+多少rate，范围0-1
+    public float punish = -0.1f;//如果失败了+多少rate，范围-1-0
     public float finishTime = 5.0f;//完成需要多少时间
     private float timer = 0.0f;
 
@@ -50,6 +51,12 @@ public class FallingBlock : MonoBehaviour
             Finish();
             timer = 0.0f;
         }
+    }
+
+    public enum Type
+    {
+        acdemic,
+        social
     }
 
     public void CollisionEnter(Collider2D collision)
@@ -110,8 +117,19 @@ public class FallingBlock : MonoBehaviour
         preivousBlock = null;
         nextBlock = null;
         transform.parent = null;
-        //加分
-        //加进度条
+        //加分，加进度条
+        if(type == Type.social)
+        {
+            Debug.Log("是social");
+            ScoreController.instance.SocScoreAdd(score);
+            ScoreController.instance.SocRateAdj(bonus);
+        }
+        else if(type == Type.acdemic)
+        {
+            Debug.Log("是acdemic");
+            ScoreController.instance.AcdScoreAdd(score);
+            ScoreController.instance.AcdRateAdj(bonus);
+        }
         //让自己消失
         Debug.Log("destroy:" + this.gameObject);
         Destroy(this.gameObject);

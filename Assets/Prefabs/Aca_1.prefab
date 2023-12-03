@@ -393,7 +393,8 @@ MonoBehaviour:
   isCaught: 0
   isCatchOthers: 0
   score: 500
-  bonus: 0.2
+  type: 0
+  bonus: 0.1
   punish: -0.1
   finishTime: 5
   timerCircle: {fileID: 4575212501209154132}

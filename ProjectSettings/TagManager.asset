@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Social block
   - Academic block
+  - Text
   layers:
   - Default
   - TransparentFX

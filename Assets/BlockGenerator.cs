@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockGenerator : MonoBehaviour
 {
-    public Transform generationArea; // 生成区域的Transform
+    public BoxCollider2D generationArea; // 生成区域的Transform
     //public float duration = 10f; // 持续时间d
     //public float randomness = 0f; // 随机性变量x
 
@@ -59,13 +59,12 @@ public class BlockGenerator : MonoBehaviour
     }
     void SpawnBlock(GameObject block)
     {
-        Vector3 spawnPosition = new Vector3(
-            Random.Range(generationArea.position.x - generationArea.localScale.x / 2, generationArea.position.x + generationArea.localScale.x / 2),
-            Random.Range(generationArea.position.y - generationArea.localScale.y / 2, generationArea.position.y + generationArea.localScale.y / 2),
-            Random.Range(generationArea.position.z - generationArea.localScale.z / 2, generationArea.position.z + generationArea.localScale.z / 2)
+        Vector2 spawnPoint = new Vector2(
+            Random.Range(generationArea.bounds.min.x, generationArea.bounds.max.x),
+            Random.Range(generationArea.bounds.min.y, generationArea.bounds.max.y)
         );
 
-        Instantiate(block, spawnPosition, Quaternion.identity, generationArea);
+        Instantiate(block, spawnPoint, Quaternion.identity);
     }
 
     string ListToString<T>(List<T> list)

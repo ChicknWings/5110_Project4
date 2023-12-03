@@ -317,7 +317,8 @@ MonoBehaviour:
   weight: 1
   isCaught: 0
   isCatchOthers: 0
-  score: 500
+  score: 200
+  type: 1
   bonus: 0.2
   punish: -0.1
   finishTime: 5

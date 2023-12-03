@@ -33,6 +33,7 @@ public class LevelController : MonoBehaviour
     private IEnumerator GameProgress()
     {
         //先显示一个开始动画
+
         //然后按照week播放
         for(int i = 0; i < levels.Count; i ++)
         {
@@ -47,6 +48,8 @@ public class LevelController : MonoBehaviour
         for(int j = 0; j < level.dailyConfig.Count; j ++)
         {
             Debug.Log("第" + j + "阶段开始");
+            GameObject text = Instantiate(textPrefab, textSpawnPoint.position, Quaternion.identity);
+            text.GetComponent<TextIni>().IniText(j == 0 ? level.title : null, level.dailyConfig[j].title);
             yield return StartCoroutine(blockGenerator.SpawnBlocks(level.dailyConfig[j], level.dailyConfig[j].duration, 0.8f));
         }
     }
