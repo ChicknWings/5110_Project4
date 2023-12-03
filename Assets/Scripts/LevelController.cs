@@ -39,6 +39,9 @@ public class LevelController : MonoBehaviour
         {
             yield return StartCoroutine(RunLevel(levels[i]));
         }
+        //游戏通关
+        GameObject text = Instantiate(textPrefab, textSpawnPoint.position, Quaternion.identity);
+        text.GetComponent<TextIni>().IniText(null, "Vectory!");
     }
 
     private IEnumerator RunLevel(LevelConfig level)
