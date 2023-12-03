@@ -27,6 +27,8 @@ public class ScoreController : MonoBehaviour
     {
         socialScoreText.text = "000000";
         acdemicScoreText.text = "000000";
+        socialSlider.value = 0.5f;
+        acdemicSlider.value = 0.5f;
     }
 
     // Update is called once per frame
@@ -44,7 +46,7 @@ public class ScoreController : MonoBehaviour
     }
     public void AcdScoreAdd(int num)
     {
-        socialScore += num;
+        acdemicScore += num;
         if (acdemicScore >= 1000000) acdemicScore = 999999;
         if (acdemicScore <= 0) acdemicScore = 0;
         acdemicScoreText.text = SwitchScore(acdemicScore);
@@ -57,7 +59,10 @@ public class ScoreController : MonoBehaviour
 
     public void SocRateAdj(float num)
     {
+        Debug.Log("bonus是" + num);
+        Debug.Log("socialRate is" + socialRate);
         socialRate += num;
+        Debug.Log("socialRate is" + socialRate);
         if (socialRate >= 1) 
         {
             socialRate = 1;
@@ -68,7 +73,14 @@ public class ScoreController : MonoBehaviour
         {
             socialRate = 0;
             //other functions
-
+            if(HeartController.instance.EditHeart(-1))
+            {
+                socialRate = 0.5f;
+            }
+            else
+            {
+                LevelController.instance.GameFailed();
+            }
         }
         socialSlider.value = socialRate;
     }
@@ -85,7 +97,14 @@ public class ScoreController : MonoBehaviour
         {
             acdemicRate = 0;
             //other functions
-
+            if (HeartController.instance.EditHeart(-1))
+            {
+                acdemicRate = 0.5f;
+            }
+            else
+            {
+                LevelController.instance.GameFailed();
+            }
         }
         acdemicSlider.value = acdemicRate;
     }

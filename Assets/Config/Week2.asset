@@ -17,12 +17,14 @@ MonoBehaviour:
   description: This is week 2. Day1-5 have some study blocks and play blocks, and
     day6-7 only have play blocks.
   dailyConfig:
-  - title: "\u7B2C\u4E00\u5929"
-    duration: 10
+  - title: Monday
+    duration: 15
     blocks:
     - block: {fileID: 9063112012820018940, guid: 9b390c2e4bd5d82478863ab18ec3af77, type: 3}
       spawnNumber: 2
-  - title: "\u7B2C\u4E8C\u5929"
+    - block: {fileID: 8105163708011385354, guid: 22b075897a581ef4c9a56dc9272a0f34, type: 3}
+      spawnNumber: 2
+  - title: Tuesday
     duration: 10
     blocks:
     - block: {fileID: 8105163708011385354, guid: 22b075897a581ef4c9a56dc9272a0f34, type: 3}

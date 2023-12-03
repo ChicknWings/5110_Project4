@@ -37,7 +37,6 @@ public class LevelController : MonoBehaviour
         //然后按照week播放
         for(int i = 0; i < levels.Count; i ++)
         {
-            Debug.Log("关卡" + i +"开始");
             yield return StartCoroutine(RunLevel(levels[i]));
         }
     }
@@ -47,10 +46,14 @@ public class LevelController : MonoBehaviour
         //从周一播到周日
         for(int j = 0; j < level.dailyConfig.Count; j ++)
         {
-            Debug.Log("第" + j + "阶段开始");
             GameObject text = Instantiate(textPrefab, textSpawnPoint.position, Quaternion.identity);
             text.GetComponent<TextIni>().IniText(j == 0 ? level.title : null, level.dailyConfig[j].title);
             yield return StartCoroutine(blockGenerator.SpawnBlocks(level.dailyConfig[j], level.dailyConfig[j].duration, 0.8f));
         }
+    }
+
+    public void GameFailed()
+    {
+        //显示游戏失败页面-选择重新开始游戏or回到主菜单？
     }
 }

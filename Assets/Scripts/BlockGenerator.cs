@@ -43,7 +43,7 @@ public class BlockGenerator : MonoBehaviour
     {
         List<GameObject> blocksList = new List<GameObject>();
         iniBlocksList(blocksList, dailyConfig);
-        Debug.Log(ListToString(blocksList));
+
         //随机方块列表顺序
         ShuffleBlocks(blocksList);
 

@@ -17,19 +17,13 @@ public class Collision : MonoBehaviour
 
         if (bottomOfCurrentObject+0.05 >= topOfCollidedObject)
         {
-            Debug.Log("发生了底面碰撞");
+            //Debug.Log("发生了底面碰撞");
 
             fallingBlock.CollisionEnter(collision);
         }
         else
         {
-            Debug.Log("没有发生地面碰撞");
+            //Debug.Log("没有发生地面碰撞");
         }
-    }
-    
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        //fallingBlock.CollisionExit(other);
     }
 }

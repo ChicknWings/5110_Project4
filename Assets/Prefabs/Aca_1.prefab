@@ -395,7 +395,7 @@ MonoBehaviour:
   score: 500
   type: 0
   bonus: 0.1
-  punish: -0.1
+  punish: -0.3
   finishTime: 5
   timerCircle: {fileID: 4575212501209154132}
   preivousBlock: {fileID: 0}

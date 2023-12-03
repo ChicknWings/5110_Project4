@@ -120,13 +120,13 @@ public class FallingBlock : MonoBehaviour
         //加分，加进度条
         if(type == Type.social)
         {
-            Debug.Log("是social");
+            Debug.Log("是social" + bonus);
             ScoreController.instance.SocScoreAdd(score);
             ScoreController.instance.SocRateAdj(bonus);
         }
         else if(type == Type.acdemic)
         {
-            Debug.Log("是acdemic");
+            Debug.Log("是acdemic" + bonus);
             ScoreController.instance.AcdScoreAdd(score);
             ScoreController.instance.AcdRateAdj(bonus);
         }
