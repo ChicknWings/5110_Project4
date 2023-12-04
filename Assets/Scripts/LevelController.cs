@@ -41,7 +41,7 @@ public class LevelController : MonoBehaviour
         }
         //游戏通关
         GameObject text = Instantiate(textPrefab, textSpawnPoint.position, Quaternion.identity);
-        text.GetComponent<TextIni>().IniText(null, "Vectory!");
+        text.GetComponent<TextIni>().IniText(null, "Victory!");
     }
 
     private IEnumerator RunLevel(LevelConfig level)

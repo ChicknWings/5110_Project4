@@ -36,6 +36,7 @@ public class FallingBlock : MonoBehaviour
     {
         player = GameObject.Find("Player");
         fallingSpeed = iniFallingSpeed;
+        UpdateTimerCircle(0);
     }
 
 
