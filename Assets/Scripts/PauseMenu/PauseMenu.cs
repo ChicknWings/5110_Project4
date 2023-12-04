@@ -7,13 +7,13 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject audioPlayer;
-    private AudioSource backGroundMusic;
+    private AudioSource audioSource;
     public bool isPaused;
+
     // Start is called before the first frame update
     void Start()
     {
-        backGroundMusic = audioPlayer.GetComponent<AudioSource>();
-
+        audioSource = audioPlayer.GetComponent<AudioSource>();
         pauseMenu.SetActive(false);
     }
 
@@ -38,15 +38,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        backGroundMusic.Pause();
-
+        audioSource.Pause();
     }
     public void ResumeGame() 
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        backGroundMusic.Play();
+        audioSource.Play();
     }
 
     public void GoToMainMenu() 

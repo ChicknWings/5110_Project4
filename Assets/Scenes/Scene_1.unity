@@ -2013,6 +2013,8 @@ MonoBehaviour:
   pauseMenu: {fileID: 1004050670}
   audioPlayer: {fileID: 1974854423}
   isPaused: 0
+  backgroundMusic: {fileID: 8300000, guid: ce62bc66ff90d194990a4d24bdcf13d3, type: 3}
+  pauseMusic: {fileID: 8300000, guid: 53bb75616c3f02b48b8138a974000aeb, type: 3}
 --- !u!4 &1042796567
 Transform:
   m_ObjectHideFlags: 0
