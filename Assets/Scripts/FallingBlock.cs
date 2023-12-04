@@ -67,13 +67,14 @@ public class FallingBlock : MonoBehaviour
         social
     }
 
-    public void CollisionEnter(Collider2D collision)
+    public void CollisionEnter(Collider2D collision, float buffer)//buffer是指collision的物体要向上挪动多少
     {
         var other = collision.gameObject.GetComponent<FallingBlock>();
         if (other != null && other.isCaught == true && other.isCatchOthers == false)
         {
             isCaught = true;
 
+            transform.position = new Vector3(transform.position.x, transform.position.y + buffer, transform.position.z);
             transform.parent = player.transform;
 
             other.isCatchOthers = true;
