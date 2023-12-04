@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2602876701690487706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6040586522926537402}
+  - component: {fileID: 8140742465389522322}
+  m_Layer: 0
+  m_Name: AudioPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6040586522926537402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602876701690487706}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8140742465389522322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602876701690487706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe2f0c089f0a4d448e0d03d7dc6fc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  academicSuccessAFX: {fileID: 8300000, guid: 7853aeb16640d3e4887a89e33b95d95b, type: 3}
+  academicSuccessVolume: 1
+  academicFailAFX: {fileID: 8300000, guid: 9c5c22c949400aa45bf2cf7979632e39, type: 3}
+  academicFailVolume: 1
+  socialSuccessAFX: {fileID: 8300000, guid: 5dac2395e54dd574999d2dc403e6ecd1, type: 3}
+  socialSuccessVolume: 1
+  socialFailAFX: {fileID: 8300000, guid: 97c56972f9873f14496a7afe532535f8, type: 3}
+  socialFailVolume: 1

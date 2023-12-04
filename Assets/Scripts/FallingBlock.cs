@@ -25,6 +25,13 @@ public class FallingBlock : MonoBehaviour
 
     private GameObject player;
 
+    AudioPlayer audioPlayer;
+
+    void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -123,12 +130,14 @@ public class FallingBlock : MonoBehaviour
             Debug.Log("是social" + bonus);
             ScoreController.instance.SocScoreAdd(score);
             ScoreController.instance.SocRateAdj(bonus);
+            audioPlayer.PlaySocialSuccessClip();
         }
         else if(type == Type.acdemic)
         {
             Debug.Log("是acdemic" + bonus);
             ScoreController.instance.AcdScoreAdd(score);
             ScoreController.instance.AcdRateAdj(bonus);
+            audioPlayer.PlayAcademicSuccessClip();
         }
         //让自己消失
         Debug.Log("destroy:" + this.gameObject);
