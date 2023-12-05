@@ -34,6 +34,7 @@ public class Balance : MonoBehaviour
         else
         {
             //如果接到的不是第一个
+            Debug.Log("不是第一个");
             Vector3 temMassCenter = gameObjects[gameObjects.Count - 1].transform.position;//最后一个方块的重心位置
             float temWeight = gameObjects[gameObjects.Count - 1].GetComponent<FallingBlock>().weight;
             int count = 0;

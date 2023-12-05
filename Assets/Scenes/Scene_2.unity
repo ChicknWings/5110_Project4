@@ -6052,6 +6052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprite
       objectReference: {fileID: 0}
+    - target: {fileID: 6465261449462646846, guid: 7340e32c2ac4aab4084de62ed10b9aaa, type: 3}
+      propertyPath: isFirst
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7624298707032054931, guid: 7340e32c2ac4aab4084de62ed10b9aaa, type: 3}
       propertyPath: m_Name
       value: Player
