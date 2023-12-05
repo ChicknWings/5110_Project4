@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Week 3
   m_EditorClassIdentifier: 
   id: 1
-  title: Week
+  title: Week 3
   description: None
   dailyConfig:
   - title: Monday
@@ -84,6 +84,8 @@ MonoBehaviour:
     - block: {fileID: 8224980428098256611, guid: b57a86d111acf1045879c9cec3655d00, type: 3}
       spawnNumber: 1
     - block: {fileID: 4896542416355645672, guid: 147684423318f8749b51c92e37902f32, type: 3}
+      spawnNumber: 1
+    - block: {fileID: 7744367183880195088, guid: 6e2c2043a9a703c4d8d19d4ef60a1df3, type: 3}
       spawnNumber: 1
   - title: Saturday
     duration: 40

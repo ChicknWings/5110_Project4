@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Week 11
   m_EditorClassIdentifier: 
   id: 1
-  title: Week
+  title: Week 11
   description: None
   dailyConfig:
   - title: Monday
@@ -40,8 +40,10 @@ MonoBehaviour:
       spawnNumber: 1
     - block: {fileID: 6015534418035648536, guid: 815cca1c0d663fb48b2a40f4bce09ca9, type: 3}
       spawnNumber: 1
+    - block: {fileID: 4700801773383708138, guid: 7269d4c62474d6043a68032098d201f0, type: 3}
+      spawnNumber: 1
   - title: Wednesday
-    duration: 60
+    duration: 45
     blocks:
     - block: {fileID: 9143549009676791435, guid: 8ac9af6b2df367b4bab259a78b5722e1, type: 3}
       spawnNumber: 1
@@ -72,6 +74,8 @@ MonoBehaviour:
       spawnNumber: 1
     - block: {fileID: 6015534418035648536, guid: 815cca1c0d663fb48b2a40f4bce09ca9, type: 3}
       spawnNumber: 1
+    - block: {fileID: 348075167656986775, guid: e6f504b29dd179949a3934dacd2e4e3d, type: 3}
+      spawnNumber: 1
   - title: Friday
     duration: 40
     blocks:
@@ -85,8 +89,10 @@ MonoBehaviour:
       spawnNumber: 1
     - block: {fileID: 4896542416355645672, guid: 147684423318f8749b51c92e37902f32, type: 3}
       spawnNumber: 1
+    - block: {fileID: 7744367183880195088, guid: 6e2c2043a9a703c4d8d19d4ef60a1df3, type: 3}
+      spawnNumber: 1
   - title: Saturday
-    duration: 40
+    duration: 30
     blocks:
     - block: {fileID: 8224980428098256611, guid: b57a86d111acf1045879c9cec3655d00, type: 3}
       spawnNumber: 1

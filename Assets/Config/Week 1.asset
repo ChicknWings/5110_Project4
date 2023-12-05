@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Week 1
   m_EditorClassIdentifier: 
   id: 1
-  title: Week
+  title: Week 1
   description: None
   dailyConfig:
   - title: Monday
