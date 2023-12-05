@@ -10,14 +10,14 @@ public class ScoreController : MonoBehaviour
     public Text socialScoreText;
     public Text acdemicScoreText;
 
-    private int socialScore;
-    private int acdemicScore;
+    private int socialScore = 0;
+    private int acdemicScore = 0;
 
     public Slider socialSlider;
     public Slider acdemicSlider;
 
-    private float socialRate;
-    private float acdemicRate;
+    private float socialRate = 0.5f;
+    private float acdemicRate = 0.5f;
     // Start is called before the first frame update
     private void Awake()
     {
