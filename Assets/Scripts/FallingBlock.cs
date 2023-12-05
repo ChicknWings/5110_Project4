@@ -82,8 +82,12 @@ public class FallingBlock : MonoBehaviour
 
             other.isCatchOthers = true;
 
-            preivousBlock = other;
+
+
             other.nextBlock = this;
+
+            preivousBlock = other;
+
             Balance.instance.AddBlock(gameObject);
         }
     }
@@ -115,20 +119,31 @@ public class FallingBlock : MonoBehaviour
     void Finish()
     {
         Debug.Log("Finished!");
-        //调用后一个物体的refall，如果有后一个物体
-        
-        if(nextBlock != null)
+        if (nextBlock != null)
         {
+
+            int index = Balance.instance.gameObjects.IndexOf(nextBlock.gameObject);
+
+            Debug.Log("index"+index);
+            Balance.instance.gameObjects[index].GetComponent<FallingBlock>().ReFall();
             nextBlock.ReFall();
+
+            nextBlock = null;
+            isCatchOthers = false;
         }
-        
+
+        int d = Balance.instance.gameObjects.IndexOf(gameObject);
+        Balance.instance.gameObjects.RemoveRange(d, Balance.instance.gameObjects.Count - d);
+        //调用后一个物体的refall，如果有后一个物体
+
+
+
         //调用前一个物体的recatch
-        if(preivousBlock != null)
+        if (preivousBlock != null)
         {
             preivousBlock.Recatch();
         }
         preivousBlock = null;
-        nextBlock = null;
         transform.parent = null;
         //加分，加进度条
         if(type == Type.social)
@@ -193,6 +208,20 @@ public class FallingBlock : MonoBehaviour
     }
     public void Aftershake()
     {
+        if(nextBlock != null)
+        {
+            int index = Balance.instance.gameObjects.IndexOf(nextBlock.gameObject);
+            Debug.Log(index);
+            Balance.instance.gameObjects[index].GetComponent<FallingBlock>().ReFall();
+            nextBlock.ReFall();
+
+            nextBlock = null;
+
+            isCatchOthers = false;
+        }
+        int d = Balance.instance.gameObjects.IndexOf(gameObject);
+        Balance.instance.gameObjects.RemoveRange(d, Balance.instance.gameObjects.Count - d);
+
         Vector3 newPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -3.0f);
         gameObject.transform.position = newPosition;
         isCaught = false;

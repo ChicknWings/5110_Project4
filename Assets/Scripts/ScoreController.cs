@@ -59,10 +59,7 @@ public class ScoreController : MonoBehaviour
 
     public void SocRateAdj(float num)
     {
-        Debug.Log("bonus是" + num);
-        Debug.Log("socialRate is" + socialRate);
         socialRate += num;
-        Debug.Log("socialRate is" + socialRate);
         if (socialRate >= 1) 
         {
             socialRate = 1;

@@ -16,6 +16,7 @@ public class Balance : MonoBehaviour
     public void AddBlock(GameObject newBlock)
     {
         gameObjects.Add(newBlock);
+        Debug.Log("list长度：" + gameObjects.Count);
         //如果是接住的第一个方块的情况
         if (newBlock.GetComponent<FallingBlock>().preivousBlock.isFirst == true)
         {
@@ -128,6 +129,7 @@ public class Balance : MonoBehaviour
             //obj.SendMessage("Balance", SendMessageOptions.DontRequireReceiver);
             obj.GetComponent<FallingBlock>().Unbalance();
             gameObjects.Remove(obj);
+            gameObjects.RemoveAt(gameObjects.Count - 1);
         }
     }
 }
