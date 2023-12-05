@@ -8,30 +8,40 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInput;
     private Animator animator;
-    public GameObject spriteObject;
+    private SpriteRenderer spriteRenderer;
+    public FallingBlock fallingBlock;
     
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
     {
         moveInput = Input.GetAxis("Horizontal");
 
-        if (moveInput > 0) 
+        if (fallingBlock.nextBlock != null)
         {
-            animator.Play("Run");
-            
+            animator.Play("Run with something");
         }
-
-           
+        else {
+            if (moveInput > 0 || moveInput < 0)
+            {
+                animator.Play("Run");
+            }
+            else
+            {
+                animator.Play("Idle");
+            }
+        }
     }
 
     void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        spriteRenderer.flipX = rb.velocity.x < 0f;
     }
 }
