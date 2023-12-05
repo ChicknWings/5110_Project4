@@ -1649,8 +1649,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Work Life Balance
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 553ebd701d00f0644bcc12adac6a91f6, type: 2}
-  m_sharedMaterial: {fileID: 8874069363035450941, guid: 553ebd701d00f0644bcc12adac6a91f6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 562b0d2531d7db243a34721f4a7d28b6, type: 2}
+  m_sharedMaterial: {fileID: -6433475468970836724, guid: 562b0d2531d7db243a34721f4a7d28b6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
