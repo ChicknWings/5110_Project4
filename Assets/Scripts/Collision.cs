@@ -14,14 +14,22 @@ public class Collision : MonoBehaviour
     {
         float bottomOfCurrentObject = transform.position.y - (GetComponent<Collider2D>().bounds.extents.y);
         float topOfCollidedObject = collision.transform.position.y + (collision.bounds.extents.y);
+        if (collision.gameObject.CompareTag("Buffer"))
+        {
+            Debug.Log("Buffer碰撞");
+            Transform parentTransform = collision.gameObject.GetComponentInParent<Transform>();
+            bottomOfCurrentObject = parentTransform.position.y - (parentTransform.gameObject.GetComponent<Collider2D>().bounds.extents.y);
+            fallingBlock.CollisionEnter(collision, topOfCollidedObject - bottomOfCurrentObject);
+            return;
+        }
 
         if (bottomOfCurrentObject+0.05 >= topOfCollidedObject)
         {
             //Debug.Log("发生了底面碰撞");
 
-            fallingBlock.CollisionEnter(collision);
+            fallingBlock.CollisionEnter(collision, topOfCollidedObject - bottomOfCurrentObject);
         }
-        else
+        else if(bottomOfCurrentObject+0.5 >= topOfCollidedObject)
         {
             //Debug.Log("没有发生地面碰撞");
         }
