@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ShakeController : MonoBehaviour
 {
+    public FallingBlock falling;
     private void Start()
     {
-        StartShake(5.0f, 5f, 10f);
+        //StartShake(5.0f, 5f, 10f);
     }
 
     public void StartShake(float duration, float magnitude, float speed)
@@ -27,5 +28,6 @@ public class ShakeController : MonoBehaviour
             yield return null;
         }
         transform.localRotation = Quaternion.identity;
+        falling.Aftershake();
     }
 }

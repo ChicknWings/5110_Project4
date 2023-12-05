@@ -13,6 +13,7 @@ public class FallingBlock : MonoBehaviour
 
     public int score;
     public Type type;
+    public bool isFirst = false;
     public float bonus = 0.2f;//如果完成了+多少rate，范围0-1
     public float punish = -0.1f;//如果失败了+多少rate，范围-1-0
     public float finishTime = 5.0f;//完成需要多少时间
@@ -22,6 +23,7 @@ public class FallingBlock : MonoBehaviour
 
     public FallingBlock preivousBlock;
     public FallingBlock nextBlock;
+    public ShakeController shake;
 
     private GameObject player;
 
@@ -34,6 +36,7 @@ public class FallingBlock : MonoBehaviour
 
     void Start()
     {
+        if (isFirst) Balance.instance.gameObjects.Add(gameObject);
         player = GameObject.Find("Player");
         fallingSpeed = iniFallingSpeed;
         UpdateTimerCircle(0);
@@ -81,6 +84,7 @@ public class FallingBlock : MonoBehaviour
 
             preivousBlock = other;
             other.nextBlock = this;
+            Balance.instance.AddBlock(gameObject);
         }
     }
 
@@ -168,5 +172,44 @@ public class FallingBlock : MonoBehaviour
     public void Recatch()
     {
         isCatchOthers = false;
+    }
+
+    public void Unbalance()
+    {
+        shake.StartShake(1.0f, 5f, 6f);
+        //掉下去
+        Debug.Log("unbalance");
+        return;
+        preivousBlock.nextBlock = null;
+        isCaught = false;
+        preivousBlock.isCatchOthers = false;
+        preivousBlock = null;
+        nextBlock = null;
+        transform.parent = null;
+        GetComponent<Collider2D>().enabled = false;
+        
+        //transform.Translate(Vector3.right * 1.0f * Time.deltaTime);
+
+    }
+    public void Aftershake()
+    {
+        Vector3 newPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -3.0f);
+        gameObject.transform.position = newPosition;
+        isCaught = false;
+        if(preivousBlock != null)
+        {
+            preivousBlock.nextBlock = null;
+            preivousBlock.isCatchOthers = false;
+            preivousBlock = null;
+        }
+        if(nextBlock != null)
+        {
+            nextBlock.preivousBlock = null;
+            nextBlock.isCaught = false;
+        }
+        nextBlock = null;
+        preivousBlock = null;
+        transform.parent = null;
+        GetComponent<Collider2D>().enabled = false;
     }
 }
