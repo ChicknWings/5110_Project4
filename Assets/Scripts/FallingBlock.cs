@@ -208,19 +208,29 @@ public class FallingBlock : MonoBehaviour
     }
     public void Aftershake()
     {
-        if(nextBlock != null)
+        int d = Balance.instance.gameObjects.IndexOf(gameObject);
+        if(d >= 0)
         {
-            int index = Balance.instance.gameObjects.IndexOf(nextBlock.gameObject);
+            Balance.instance.gameObjects.RemoveRange(d, Balance.instance.gameObjects.Count - d);
+
+        }
+        if (nextBlock != null)
+        {
+            int index = Balance.instance.gameObjects.IndexOf(nextBlock.gameObject);//找到下一个block的index
             Debug.Log(index);
-            Balance.instance.gameObjects[index].GetComponent<FallingBlock>().ReFall();
+            if(index>=0)
+            {
+                Balance.instance.gameObjects[index].GetComponent<FallingBlock>().ReFall();
+
+            }
             nextBlock.ReFall();
 
             nextBlock = null;
 
             isCatchOthers = false;
         }
-        int d = Balance.instance.gameObjects.IndexOf(gameObject);
-        Balance.instance.gameObjects.RemoveRange(d, Balance.instance.gameObjects.Count - d);
+        //int d = Balance.instance.gameObjects.IndexOf(gameObject);
+        //Balance.instance.gameObjects.RemoveRange(d, Balance.instance.gameObjects.Count - d);
 
         Vector3 newPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -3.0f);
         gameObject.transform.position = newPosition;

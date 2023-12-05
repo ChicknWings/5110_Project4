@@ -55,10 +55,11 @@ public class Balance : MonoBehaviour
                     }
                     else
                     {
+                        gameObjects[i].GetComponent<FallingBlock>().Unbalance();
                         Debug.Log("没击中");
                         List<GameObject> objs = gameObjects.GetRange(i, count);
                         objs.Reverse();
-                        BalanceAndRemove(objs);
+                        //BalanceAndRemove(objs);
                         return;
                     }
                 }
@@ -124,6 +125,7 @@ public class Balance : MonoBehaviour
 
     void BalanceAndRemove(List<GameObject> objectsToBalance)
     {
+        
         foreach (var obj in objectsToBalance)
         {
             // 调用 Balance 方法，这里假设 GameObject 有一个 Balance 方法
@@ -132,5 +134,6 @@ public class Balance : MonoBehaviour
             gameObjects.Remove(obj);
             gameObjects.RemoveAt(gameObjects.Count - 1);
         }
+        
     }
 }
