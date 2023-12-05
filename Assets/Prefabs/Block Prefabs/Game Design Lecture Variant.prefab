@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2344707131030313500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2010071768738678836, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 107.1301
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010071768738678836, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 111.2684
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010071768738678836, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010071768738678836, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478348419543487697, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_Text
+      value: Game Design Lecture
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478348419543487697, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478348419543487697, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984696078341041292, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_Name
+      value: Game Design Lecture Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.26393
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.556204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646008088301764718, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1db7d7fd7c6413643a1cfd690e72eac3, type: 3}
