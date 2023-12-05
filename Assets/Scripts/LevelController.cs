@@ -12,9 +12,12 @@ public class LevelController : MonoBehaviour
     public Transform textSpawnPoint;
     public GameObject textPrefab;
 
+    public GameObject audioPlayer;
     public float scrollingSpeed = 3.0f;
 
     private bool isInGame = false;
+
+    public GameObject gameOverPanel;
 
     private void Awake()
     {
@@ -57,6 +60,8 @@ public class LevelController : MonoBehaviour
 
     public void GameFailed()
     {
-        //显示游戏失败页面-选择重新开始游戏or回到主菜单？
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+        audioPlayer.SetActive(false);
     }
 }
